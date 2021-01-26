@@ -116,7 +116,6 @@
 <span id="113">113</span>
 <span id="114">114</span>
 <span id="115">115</span>
-<span id="116">116</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="kw">use</span> <span class="kw">crate</span>::{<span class="ident">FromPyObject</span>, <span class="ident">IntoPy</span>, <span class="ident">PyAny</span>, <span class="ident">PyObject</span>, <span class="ident">PyResult</span>, <span class="ident">Python</span>, <span class="ident">ToPyObject</span>};
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">borrow</span>::<span class="ident">Cow</span>;
@@ -230,7 +229,6 @@
             <span class="kw">let</span> <span class="ident">path</span> <span class="op">=</span> <span class="ident">Path</span>::<span class="ident">new</span>(<span class="string">&quot;Hello\0\n🐍&quot;</span>);
             <span class="ident">test_roundtrip</span>::<span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">Path</span><span class="op">&gt;</span>(<span class="ident">py</span>, <span class="ident">path</span>);
             <span class="ident">test_roundtrip</span>::<span class="op">&lt;</span><span class="ident">PathBuf</span><span class="op">&gt;</span>(<span class="ident">py</span>, <span class="ident">path</span>.<span class="ident">to_path_buf</span>());
-            <span class="ident">test_roundtrip</span>::<span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">PathBuf</span><span class="op">&gt;</span>(<span class="ident">py</span>, <span class="kw-2">&amp;</span><span class="ident">path</span>.<span class="ident">to_path_buf</span>());
         })
     }
 }
